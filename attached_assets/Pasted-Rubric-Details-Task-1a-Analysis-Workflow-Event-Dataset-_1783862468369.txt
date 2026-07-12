@@ -1,0 +1,41 @@
+Rubric Details
+Task 1a: Analysis Workflow, Event Dataset, and Assumptions
+Task 1a is assessed based on observable evidence in the repository: 1. Analysis Workflow Documentation: A 1 page document or notebook section outlining the planned analysis steps from data loading to insight generation is present 2. Event Dataset: A structured CSV or tabular file containing at least 10 key geopolitical, OPEC, and economic events with approximate dates is committed to the repository 3. Assumptions and Limitations: A written section or file documents analysis assumptions and limitations, including acknowledgment of the distinction between statistical correlation in time and causal impact
+High
+8 pts •
+Moderate
+5 pts •
+Average
+3 pts •
+Non-existent
+0 pts •
+Task 1b: Time Series EDA and Change Point Model Understanding
+Task 1b is assessed based on observable evidence in the repository: 1. EDA Notebook: A Jupyter notebook is present with the Brent oil price data loaded and visualized, including at minimum a raw price series plot and a log returns plot 2. Time Series Property Analysis: Notebook includes written and/or visual investigation of trend, stationarity, and volatility patterns, with a discussion of how these properties inform modeling choices 3. Change Point Model Explanation: Notebook or documentation includes a written explanation of the purpose of change point models for detecting structural breaks in oil price data and the expected outputs of such analysis (e.g., identified change point dates, new parameter values, and inherent limitations)
+High
+6 pts •
+Moderate
+4 pts •
+Average
+3 pts •
+Non-existent
+0 pts •
+Repository Best Practices
+Expected repository organization qualities are as follows: 1. Configuration Files: Presence of .gitignore (excluding virtual environments, large data files, etc.) and requirements.txt with dependencies listed 2. README Documentation: Clear README.md with project description, setup instructions, and data source reference (Brent oil prices dataset) 3. Folder Structure: Project structure follows the specified layout with notebooks/, scripts/, src/, and tests/ directories present 4. File Organization: Clean separation of notebooks, scripts, and configuration files as outlined in the challenge project structure
+High
+4 pts •
+Moderate
+3 pts •
+Average
+2 pts •
+Non-existent
+0 pts •
+Code Best Practices
+Expected code quality characteristics are as follows: 1. Modularity: Code organized into functions/modules with clear separation of concerns 2. Code Structure: Proper imports, efficient data handling, clean code structure, and adherence to best practices 3. Error Handling: Basic error handling for common failure cases (e.g., file loading, data parsing)
+High
+3 pts •
+Moderate
+2 pts •
+Average
+1 pts •
+Non-existent
+0 pts •
