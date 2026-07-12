@@ -43,7 +43,7 @@ def fetch_brent_csv(url: str = FRED_URL, timeout: int = 30) -> pd.DataFrame:
 
     try:
         df = pd.read_csv(io.StringIO(response.text))
-    except pd.errors.ParserError as exc:
+    except (pd.errors.ParserError, pd.errors.EmptyDataError) as exc:
         raise RuntimeError(f"Could not parse FRED response as CSV: {exc}") from exc
 
     if df.empty or df.shape[1] < 2:

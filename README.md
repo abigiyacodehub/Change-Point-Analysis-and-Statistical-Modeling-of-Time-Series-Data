@@ -29,11 +29,16 @@ next phase of the project.
 
 ## Project structure
 
+This repository contains only the change-point analysis project. All paths
+below are top-level; `src/`, `notebooks/`, `scripts/`, and `tests/` are not
+nested under anything else, so the analysis can be reproduced directly from
+a fresh clone with no other setup.
+
 ```
 .
 ├── data/
 │   ├── raw/BrentOilPrices.csv     # Brent oil price series (Date, Price)
-│   └── events/key_events.csv      # Structured event dataset
+│   └── events/key_events.csv      # Structured event dataset (20 events)
 ├── docs/
 │   ├── analysis_workflow.md       # Task 1a: planned analysis workflow
 │   └── assumptions_and_limitations.md
@@ -42,11 +47,14 @@ next phase of the project.
 ├── scripts/
 │   └── download_data.py           # Refresh the Brent price dataset from FRED
 ├── src/
+│   ├── __init__.py
 │   ├── data_loader.py             # Data loading/validation helpers
 │   └── eda.py                     # Stationarity, volatility, plotting helpers
 ├── tests/
-│   └── test_data_loader.py        # Unit tests for src/data_loader.py
-├── requirements.txt
+│   ├── test_data_loader.py        # Unit tests for src/data_loader.py
+│   ├── test_eda.py                # Unit tests for src/eda.py
+│   └── test_download_data.py      # Unit tests for scripts/download_data.py
+├── requirements.txt                # Root-level, pip-installable dependency list
 └── .gitignore
 ```
 
@@ -60,7 +68,9 @@ pip install -r requirements.txt
 
 - **Refresh the price data**: `python scripts/download_data.py`
 - **Run the EDA notebook**: `jupyter notebook notebooks/01_eda_and_change_point_understanding.ipynb`
-- **Run unit tests**: `pytest tests/`
+- **Run unit tests**: `pytest tests/` (covers `src/data_loader.py`, `src/eda.py`,
+  and `scripts/download_data.py`, including error paths such as missing files,
+  malformed rows, and network failures)
 
 ## Key findings so far (Task 1b)
 

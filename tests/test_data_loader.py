@@ -90,3 +90,38 @@ def test_load_key_events(tmp_events_csv):
 def test_load_key_events_missing_file():
     with pytest.raises(DataLoadError):
         load_key_events("nope.csv")
+
+
+def test_load_key_events_missing_columns(tmp_path):
+    bad = tmp_path / "bad_events.csv"
+    pd.DataFrame({"event_id": [1], "date": ["2020-01-01"]}).to_csv(bad, index=False)
+    with pytest.raises(DataLoadError):
+        load_key_events(str(bad))
+
+
+def test_load_key_events_unparseable_date(tmp_path):
+    bad = tmp_path / "bad_dates.csv"
+    pd.DataFrame(
+        {
+            "event_id": [1, 2],
+            "date": ["2020-01-01", "not-a-date"],
+            "event_name": ["A", "B"],
+            "category": ["Geopolitical", "OPEC"],
+        }
+    ).to_csv(bad, index=False)
+    with pytest.raises(DataLoadError):
+        load_key_events(str(bad))
+
+
+def test_load_brent_prices_empty_file(tmp_path):
+    empty = tmp_path / "empty.csv"
+    empty.write_text("")
+    with pytest.raises(DataLoadError):
+        load_brent_prices(str(empty))
+
+
+def test_load_brent_prices_all_invalid_rows(tmp_path):
+    bad = tmp_path / "all_bad.csv"
+    pd.DataFrame({"Date": [".", "."], "Price": [".", "."]}).to_csv(bad, index=False)
+    with pytest.raises(DataLoadError):
+        load_brent_prices(str(bad))

@@ -42,3 +42,27 @@ dist/
 # uv/python scaffold files not used by this project
 pyproject.toml
 uv.lock
+
+# Replit workspace / pnpm monorepo scaffold (not part of this data-science
+# submission; this repl also hosts unrelated web-app artifacts locally)
+.replit
+.replitignore
+.npmrc
+replit.md
+package.json
+pnpm-lock.yaml
+pnpm-workspace.yaml
+tsconfig.json
+tsconfig.base.json
+scripts/package.json
+scripts/tsconfig.json
+scripts/tsconfig.tsbuildinfo
+scripts/post-merge.sh
+scripts/src/
+scripts/node_modules/
+artifacts/
+lib/
+.upm/
+.cache/
+.config/
+.github/
