@@ -1,0 +1,41 @@
+Rubric Details
+Task 1 & 2: Analysis Foundation and Bayesian Change Point Modeling
+Task 1 & 2 are assessed based on observable evidence in the repository (merged because both tasks form the core analytical pipeline leading from data understanding to modeling): Task 1 Components: 1. Analysis Workflow Document: A document or notebook section outlining planned steps from data loading to insight generation is present 2. Event Dataset: A structured CSV or tabular file with at least 10–15 key events (geopolitical, OPEC, economic) and their approximate dates is committed 3. Assumptions and Limitations: Documentation acknowledging the correlation-vs.-causation constraint is present Task 2 Components: 4. EDA Notebook: A Jupyter notebook contains loading and visualization of the Brent oil price series (raw prices and log returns) with trend, stationarity, and volatility analysis 5. PyMC Model Implementation: Notebook includes a Bayesian change point model built using PyMC with a defined switch point (tau), before/after parameters, and a likelihood connected via pm.math.switch 6. MCMC Sampling and Convergence: Evidence of MCMC sampling (e.g., pm.sample() call) with convergence diagnostics such as r_hat values and trace plots 7. Change Point Interpretation: Notebook includes posterior distribution plots for tau and before/after parameters, with written interpretation linking detected change points to specific events from the compiled event dataset
+High
+8 pts •
+Moderate
+5 pts •
+Average
+3 pts •
+Non-existent
+0 pts •
+Task 3: Interactive Flask/React Dashboard
+Task 3 is assessed based on observable evidence in the repository: 1. Flask Backend: Application entry point (e.g., app.py) is present with defined API endpoints for historical price data, change point results, and event correlation data 2. React Frontend: A React project directory is present with component files implementing the dashboard interface 3. Interactive Visualizations: Frontend code includes components for displaying historical price trends with event overlays, change point markers, or event highlight functionality 4. Filtering Features: Code includes date range selectors or event filter components for stakeholder exploration 5. Dashboard README: Setup and run instructions for both the Flask backend and React frontend are documented (e.g., in the main README or a dedicated dashboard README) 6. Screenshots: Screenshots demonstrating the working dashboard are included in the repository or report
+High
+8 pts •
+Moderate
+5 pts •
+Average
+3 pts •
+Non-existent
+0 pts •
+Git & GitHub Best Practices
+Expected Git & GitHub practices are as follows: 1. Commits: Frequent commits with meaningful, descriptive commit messages reflecting incremental progress 2. Branching Strategy: Proper creation and use of task branches (e.g., task-1, task-2, task-3) 3. Pull Requests: All task branches merged into the main branch via Pull Request 4. CI/CD: GitHub Actions workflow file present (e.g., .github/workflows/unittests.yml as specified in the project structure)
+High
+4 pts •
+Moderate
+3 pts •
+Average
+2 pts •
+Non-existent
+0 pts •
+Code Best Practices
+Expected code quality characteristics are as follows: 1. Modularity: Code organized into functions/modules with clear separation of concerns (e.g., data loading, model definition, visualization separated into reusable components) 2. Code Structure: Proper imports, efficient data handling, clean code structure, and adherence to best practices across both Python (notebooks/scripts) and JavaScript (React components) 3. Error Handling: Basic error handling for common failure cases (e.g., data loading, API requests)
+High
+3 pts •
+Moderate
+2 pts •
+Average
+1 pts •
+Non-existent
+0 pts •

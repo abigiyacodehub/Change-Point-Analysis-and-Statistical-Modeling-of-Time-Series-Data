@@ -21,7 +21,8 @@ pyproject.toml
 # Data files (large / regenerable)
 data/raw/*.csv
 !data/raw/BrentOilPrices.csv
-data/processed/
+data/processed/*
+!data/processed/change_point_results.json
 
 # Jupyter
 .ipynb_checkpoints

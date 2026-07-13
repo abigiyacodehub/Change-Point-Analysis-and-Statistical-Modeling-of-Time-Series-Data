@@ -53,7 +53,13 @@ analysts, energy companies) who need to understand price regime shifts.
      change point, and prepare a stakeholder-facing summary (report/dashboard)
      of findings.
 
-## Deliverables at this stage (interim submission)
+6. **Interactive dashboard (subsequent phase)**
+   - Serve the price series, detected change point(s), and event dataset
+     through a Flask API and a React frontend so stakeholders can explore
+     the analysis interactively (date range filtering, event highlighting)
+     without reading the notebooks directly.
+
+## Deliverables
 
 - This workflow document.
 - The structured event dataset (`data/events/key_events.csv`).
@@ -61,3 +67,9 @@ analysts, energy companies) who need to understand price regime shifts.
 - An EDA notebook (`notebooks/01_eda_and_change_point_understanding.ipynb`)
   covering raw price/log-return visualization, stationarity/volatility
   analysis, and a written explanation of change point models.
+- A Bayesian change point model notebook
+  (`notebooks/02_bayesian_change_point_model.ipynb`) implementing steps 4-5:
+  a PyMC single change point model with MCMC sampling, convergence
+  diagnostics, and an interpretation linking the detected change point to
+  the compiled event dataset.
+- An interactive Flask/React dashboard (`dashboard/`) implementing step 6.
