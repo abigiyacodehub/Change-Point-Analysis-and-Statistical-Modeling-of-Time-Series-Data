@@ -1,0 +1,43 @@
+{
+  "model": "single_change_point_normal_switch",
+  "n_observations": 9926,
+  "random_seed": 42,
+  "max_r_hat": 1.0,
+  "converged": true,
+  "tau_index_median": 5389,
+  "change_point_date": "2008-07-29",
+  "change_point_ci_low": "2008-05-01",
+  "change_point_ci_high": "2008-09-12",
+  "mu_before": 0.00034484421561667834,
+  "mu_after": -0.00012012256907116894,
+  "sigma_before": 0.02303930352573647,
+  "sigma_after": 0.027968254662882993,
+  "pct_volatility_change": 21.393663795611488,
+  "linked_events": [
+    {
+      "event_id": 8,
+      "event_name": "Brent oil price peaks near $147/barrel",
+      "category": "Economic",
+      "days_from_change_point": -18,
+      "within_window": true,
+      "date": "2008-07-11"
+    },
+    {
+      "event_id": 9,
+      "event_name": "Global Financial Crisis (Lehman Brothers collapse)",
+      "category": "Economic",
+      "days_from_change_point": 48,
+      "within_window": true,
+      "date": "2008-09-15"
+    },
+    {
+      "event_id": 10,
+      "event_name": "Arab Spring / Libyan civil war",
+      "category": "Geopolitical",
+      "days_from_change_point": 931,
+      "within_window": false,
+      "date": "2011-02-15"
+    }
+  ],
+  "interpretation": "Single change point model detects the dominant mean/volatility regime shift in the full 1987-2026 daily log-return series, landing in the run-up to the 2008 Brent price peak and Global Financial Crisis. Volatility rises sharply after the change point. This is a temporal association with 2008 events, not evidence of causation; see docs/assumptions_and_limitations.md."
+}
