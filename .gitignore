@@ -50,7 +50,8 @@ uv.lock
 .replitignore
 .npmrc
 replit.md
-package.json
+/package.json
+!/dashboard/frontend/package.json
 pnpm-lock.yaml
 pnpm-workspace.yaml
 tsconfig.json
@@ -66,4 +67,4 @@ lib/
 .upm/
 .cache/
 .config/
-.github/
+replit.nix

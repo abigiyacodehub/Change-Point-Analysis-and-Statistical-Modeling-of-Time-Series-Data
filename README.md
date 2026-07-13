@@ -107,3 +107,10 @@ See `notebooks/01_eda_and_change_point_understanding.ipynb` and
 `docs/assumptions_and_limitations.md` for an important discussion of why
 temporal proximity between an event and a detected change point is an
 association, not proof of causation.
+
+## Dashboard (Task 3)
+
+`dashboard/` contains an interactive Flask + React dashboard for exploring
+the price series, the detected change point, and events without reading the
+notebooks directly — see `dashboard/README.md` for setup and run
+instructions, and `docs/screenshots/dashboard_overview.png` for a preview.
