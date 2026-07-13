@@ -1,0 +1,3 @@
+- [Gitignore blanket rules can hide legitimate project files](gitignore-blanket-rules.md) — broad excludes added for one scaffold (e.g. all `package.json`, all `.github/`) can silently un-track a different subproject's real files.
+- [PyMC discrete change-point convergence](pymc-changepoint-convergence.md) — draws=1000/tune=1000 gave borderline r_hat≈1.01 on a ~10k-obs single change point model; doubling draws/tune and raising target_accept reliably gets r_hat=1.00.
+- [Playwright headless Chromium on Nix](playwright-headless-chromium-nix.md) — needs nspr/nss/mesa-libgbm etc. installed via installSystemDependencies, and mesa's libgbm often isn't on the default LD_LIBRARY_PATH.
